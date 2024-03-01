@@ -8,8 +8,8 @@ from tqdm import tqdm
 from pathlib import Path
 from torch_geometric.data import DataLoader
 from torch_geometric.data import Data, InMemoryDataset, NeighborSampler
-from tick.base import TimeFunction
-from tick.hawkes import SimuInhomogeneousPoisson, SimuHawkes, SimuHawkesExpKernels, HawkesKernelTimeFunc, HawkesKernel0, HawkesKernelExp
+# from tick.base import TimeFunction
+# from tick.hawkes import SimuInhomogeneousPoisson, SimuHawkes, SimuHawkesExpKernels, HawkesKernelTimeFunc, HawkesKernel0, HawkesKernelExp
 
 
 
