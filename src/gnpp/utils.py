@@ -178,7 +178,9 @@ def read_file(graph_file, directed=False, rescale=False, return_edgearray=False,
     edges = edges[mask]
     edgearray = edgearray[mask]
     edges = edges.tolist() # mush be a list, or an ajcanency np array
-    timestamps = edgearray[:, -1].astype(np.float)
+    # timestamps = edgearray[:, -1].astype(np.float)
+    timestamps = edgearray[:, -1]
+    timestamps.astype(float)
 
     if directed:
         G = nx.DiGraph(edges)
