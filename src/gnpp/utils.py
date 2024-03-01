@@ -170,7 +170,10 @@ def read_file(graph_file, directed=False, rescale=False, return_edgearray=False,
     edgearray = edgearray[ edgearray[:, -1].argsort() ] # IMPORTANT: sort timestampes
     edgearray[:, -1] = edgearray[:, -1] - min(edgearray[:, -1]) # set earliest timestamp as 0
 
-    edges = edgearray[:, :2].astype(np.int) 
+    # edges = edgearray[:, :2].astype(np.int) 
+    edges = edgearray[:, :2]
+    # x.astype(int)
+    edges.astype(int)
     mask = edges[:, 0] != edges[:, 1] # self->self is not allowed
     edges = edges[mask]
     edgearray = edgearray[mask]
