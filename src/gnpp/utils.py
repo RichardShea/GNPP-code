@@ -243,9 +243,10 @@ def get_dataset(G, args):
         raise NotImplementedError()
 
 
-    train_set = DatasetClass(G, args.datadir/args.dataset, 'train', rescale=rescale)
-    test_set = DatasetClass(G, args.datadir/args.dataset, 'test', rescale=rescale)
-    
+    # train_set = DatasetClass(G, args.datadir/args.dataset, 'train', rescale=rescale)
+    # test_set = DatasetClass(G, args.datadir/args.dataset, 'test', rescale=rescale)
+    train_set = DatasetClass(G, args.datadir + args.dataset, 'train', rescale=rescale)
+    test_set = DatasetClass(G, args.datadir + args.dataset, 'test', rescale=rescale)
     return train_set, None, test_set
 
 def get_dataloader(train_set, val_set, test_set, args):
