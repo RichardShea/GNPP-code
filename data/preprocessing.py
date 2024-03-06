@@ -9,6 +9,9 @@ def preprocessing(dataset):
     elif dataset == 'reddit':
         data_file = './reddit.csv'
         new_file = './Reddit.txt'
+    elif dataset == 'lastfm':
+        data_file = './lastfm.csv'
+        new_file = './lastfm.txt'
     
     print(f'data file: {data_file}.')
     print(f'processed file: {new_file}.')
@@ -22,7 +25,7 @@ def preprocessing(dataset):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Preprocessing')
-    parser.add_argument('--dataset', type=str, choices=['wikipedia', 'reddit'], default='wikipedia', help='Dataset' )
+    parser.add_argument('--dataset', type=str, choices=['wikipedia', 'reddit', 'lastfm'], default='wikipedia', help='Dataset' )
     args = parser.parse_args()
     dataset = args.dataset # wikipedia, reddit
     preprocessing(dataset)
