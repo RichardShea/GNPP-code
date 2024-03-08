@@ -237,7 +237,7 @@ def get_dataset(G, args):
     
     if args.dataset in ['Synthetic_hawkes_neg', 'Synthetic_hawkes_pos', 'Synthetic_poisson']:
         rescale = 1
-    elif args.dataset in ['Wikipedia', 'Reddit', 'CollegeMsg']:
+    elif args.dataset in ['lastfm','Wikipedia', 'Reddit', 'CollegeMsg']:
         rescale = 10000
     else:
         raise NotImplementedError()
